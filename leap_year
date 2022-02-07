@@ -1,0 +1,28 @@
+year = int(input("Which year do you want to check? "))
+
+Leap_year = False
+
+Divisible_by_4 = False
+Divisible_by_100 = False
+Divisible_by_400 = False
+
+if year % 4 == 0:
+    Divisible_by_4 = True
+
+if year % 100 == 0:
+    Divisible_by_100 = True
+
+if year % 400 == 0:
+    Divisible_by_400 = True
+
+if Divisible_by_4 == True:
+    if Divisible_by_100 == False:
+        Leap_year = True
+    elif Divisible_by_100 == True:
+        if Divisible_by_400 == True:
+            Leap_year = True
+
+if Leap_year == True:
+    print("Leap Year.")
+else:
+    print("Not leap year.")
